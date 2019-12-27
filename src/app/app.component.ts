@@ -20,5 +20,13 @@ export class AppComponent implements OnInit {
       }),
       terms: ['', Validators.requiredTrue]
     });
+
+    // this.form.valueChanges.subscribe(value => {
+    //   console.log(
+    //     '%c 🍮 this.form: ',
+    //     'font-size:20px;background-color: #6EC1C2;color:#fff;',
+    //     this.form
+    //   );
+    // });
   }
 }

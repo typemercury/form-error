@@ -1,4 +1,4 @@
-<form [formGroup]="form">
+<form [formGroup]="form" #f="ngForm">
   <div class="field">
     <input formControlName="name" placeholder="Name" />
   </div>
@@ -14,13 +14,19 @@
     </div>
   </div>
   <label>
-    <input type="checkbox" formControlName="terms" />
+    <input
+      type="checkbox"
+      formControlName="terms"
+      [customErrors]="{ required: 'YOYOYO' }"
+    />
     I agree to the <a href="#">terms and conditions</a>
   </label>
   <div>
     <button>Submit</button>
   </div>
 </form>
+
+{{ f.value | json }}
 
 {{ form.value | json }}
 {{ form.errors | json }}
